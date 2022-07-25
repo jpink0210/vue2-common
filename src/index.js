@@ -1,4 +1,4 @@
-import ChechBoxAryInput from "src/components/ChechBoxAryInput.vue";
+import ChechBoxAryInput from "./components/ChechBoxAryInput.vue";
 
 export {
     ChechBoxAryInput
