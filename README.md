@@ -24,3 +24,8 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 計畫
+
+執行 vue3 或是 typescript
+今天的重大改革是日綠
