@@ -13,16 +13,20 @@
       >
         {{ item }}
       </chech-box-ary-input>
+
+      <CheckBox />
   </div>
 </template>
 
 <script>
 import ChechBoxAryInput from "@/components/ChechBoxAryInput";
+import CheckBox from "@/components/inputs/CheckBox";
 
 export default {
   name: 'Demo',
   components: {
-    ChechBoxAryInput
+    ChechBoxAryInput,
+    CheckBox
   },
   data() {
     return {
