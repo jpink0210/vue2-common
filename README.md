@@ -25,8 +25,8 @@ yarn lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-# 說明
 
+# 說明
 
 ### Step1.
 下載 repo
@@ -54,8 +54,17 @@ import "common.scss/a.variables.scss";
 import "common.scss/b.scss";
 import "common.scss/c.scss";
 `
-3. 套用專案其他變數引入
 
+- 亦可以用 webpack 的設定檔套入
+`
+module.exports = {
+  css: {
+    loaderOptions: ....
+`
+
+
+3. 套用專案其他變數引入
+- 為了方便 component 開發。
 把 共用元件Repo 套上 @ 當作一個正式的外來引入對象，針對其 src。
 `
   .set('common.styles', '@/../node_modules/CommonRepo/src/styles')
@@ -65,3 +74,13 @@ import "common.scss/c.scss";
 ### Step4.
 
 共用元件Repo 隨著版本發佈，要每次更新
+ex: yarn upgrade xxxRepo
+
+## 比較
+
+- [CSS框架設計] mutli-repo vs 共用元件
+
+SCSS 框架釋出的技術上大同小異，只不過在排列次序上，
+Mutli-Repo 注重的是變數的輸出，針對不同適用範圍。
+然後共用元件專案注重是通用性、穩定性、版本控制，檔案引入數量不等無所謂。
+
