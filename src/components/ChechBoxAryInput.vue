@@ -106,7 +106,102 @@ export default Vue.extend({
   }
 })
 </script>
+<style lang="scss" scoped>
+@import "~scss/variables";
 
-<style>
+.form-group{
+  margin-bottom: 0;
+}
 
+.form-check{
+  padding-left: 0;
+}
+
+.form-check-input{
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.checkbox-input {
+  display: inline-block;
+  user-select: none;
+
+  label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  &--disabled {
+    label {
+      cursor: not-allowed;
+    }
+  }
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    visibility: hidden;
+
+    &:checked {
+      + span {
+        background-color: $primary;
+        border-color: $primary;
+
+        &::after {
+          display: block;
+        }
+      }
+    }
+
+    + span {
+      display: inline-block;
+      position: relative;
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      background-color: $white;
+      border: 1px $gray-800 solid;
+      border-radius: 2px;
+      transition: background-color ease 0.2s, border-color ease 0.2s;
+
+      &::after {
+        content: "";
+        display: none;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 8px;
+        height: 5px;
+        border-bottom: 1.5px $white solid;
+        border-left: 1.5px $white solid;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:disabled {
+      + span {
+        border-color: $gray-600;
+      }
+
+      &:checked {
+        + span {
+          background-color: $gray-600;
+        }
+      }
+    }
+  }
+
+  &--multiple {
+    input[type="checkbox"] {
+      + span {
+        &::after {
+          top: 6px;
+          height: 0;
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+}
 </style>

@@ -81,9 +81,10 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       #ff7800;
-$secondary:     #ff9100;
-$tertiary:      #ffd6b2;
+// colordrop.io
+$primary:       #1285af;
+$secondary:     #59b6d7;
+$tertiary:      #92ddf8;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $red;
