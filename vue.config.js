@@ -3,6 +3,7 @@ function resolve (dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
+  transpileDependencies: [/node_modules[/\\\\]uuid[/\\\\]/],
   css: {
     loaderOptions: {
       scss: {
