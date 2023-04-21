@@ -107,7 +107,7 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss" scoped>
-@import "~scss/variables";
+// @import "~scss/global.variables.scss";
 
 .form-group{
   margin-bottom: 0;

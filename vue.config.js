@@ -3,6 +3,13 @@ function resolve (dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `@import './src/scss/global.variables.scss';`
+      }
+    }
+  },
   chainWebpack: (config)=>{
     config.resolve.alias
       .set('@$', resolve('src'))
