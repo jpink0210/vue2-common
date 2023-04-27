@@ -107,10 +107,12 @@ $theme-colors: map-merge(
     "light":          $light,
     "white":          $white,
     "dark":           $dark,
+    "gray-score":     $gray-300,
+    "gray-lighter":   $gray-400,
+    "gray-light":      $gray-500,
     "gray-dark":      $gray-600,
     "gray-darker":    $gray-700,
-    "gray-deep-dark": $gray-900,
-    "gray-score" :    $gray-300
+    "gray-deep-dark": $gray-900
   ),
   $theme-colors
 );
