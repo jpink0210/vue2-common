@@ -51,6 +51,13 @@ $green-apple:         #92cf53;
 $green-grass:         #6fb827;
 $teal:                #20c997 !default;
 $cyan:                #17a2b8 !default;
+$mt1:                #dabea7 !default;
+$mt2:                #cda581 !default;
+$mt3:                #a98b73 !default;
+$mt4:                #9d7553 !default;
+$mt5:                #9a6852 !default;
+$mt6:                #876d5a !default;
+
 
 $colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -77,6 +84,13 @@ $colors: map-merge(
     "gray":             $gray-500,
     "gray-light":       $gray-400,
     "gray-lighter":     $gray-300,
+    "mt1":              $mt1,
+    "mt2":              $mt2,
+    "mt3":              $mt3,
+    "mt4":              $mt4,
+    "mt5":              $mt5,
+    "mt6":              $mt6,
+
   ),
   $colors
 );
@@ -112,7 +126,13 @@ $theme-colors: map-merge(
     "gray-light":      $gray-500,
     "gray-dark":      $gray-600,
     "gray-darker":    $gray-700,
-    "gray-deep-dark": $gray-900
+    "gray-deep-dark": $gray-900,
+    "mt1":              $mt1,
+    "mt2":              $mt2,
+    "mt3":              $mt3,
+    "mt4":              $mt4,
+    "mt5":              $mt5,
+    "mt6":              $mt6,
   ),
   $theme-colors
 );
