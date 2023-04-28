@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       localValue : ["1",2,3,4],
-      inputVal_1: "2123123"
+      inputVal_1: ""
     }
   },
   mounted: function () {
@@ -56,7 +56,6 @@ export default {
       console.log("checkedChange")
     },
     onClearV1() {
-      console.log("123")
       this.inputVal_1 = "";
     }
   }
