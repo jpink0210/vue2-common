@@ -33,17 +33,21 @@
           type="number"
         />
       </div>
+      <div class="w-100"></div>
       <div>
         <FormRadio v-model="inputVal_r" value="1"> 1 </FormRadio>
         <FormRadio v-model="inputVal_r" value="2"> 2 </FormRadio>
         <FormRadio v-model="inputVal_r" value="3"> 3 </FormRadio>
         <FormRadio v-model="inputVal_r" value="4"> 4 </FormRadio>
       </div>
+      <div class="w-100"></div>
+      <p>localValue required && must Array</p>
+      <div class="w-100"></div>
       <div>
-        <FormCheckbox  :localValue="input_checkbox" :value="1" />
-        <FormCheckbox  :localValue="input_checkbox" :value="2" />
-        <FormCheckbox  :localValue="input_checkbox" :value="3" />
-        <FormCheckbox  :localValue="input_checkbox" :value="4" />
+        <FormCheckbox  :localValue="input_checkbox" :value="1">1</FormCheckbox>
+        <FormCheckbox  :localValue="input_checkbox" :value="2">2</FormCheckbox>
+        <FormCheckbox  :localValue="input_checkbox" :value="3">3</FormCheckbox>
+        <FormCheckbox  :localValue="input_checkbox" :value="4">4</FormCheckbox>
       </div>
     </div>
   </div>
