@@ -27,6 +27,12 @@
           @clear="inputVal_1 = ''"
         />
       </div>
+      <div class="col-3">
+        <FormInput
+          v-model="inputVal_num"
+          type="number"
+        />
+      </div>
       <div>
         <FormRadio v-model="inputVal_r" value="1"> 1 </FormRadio>
         <FormRadio v-model="inputVal_r" value="2"> 2 </FormRadio>
@@ -56,6 +62,7 @@ export default {
     return {
       localValue : ["1",2,3,4],
       inputVal_1: "",
+      inputVal_num: "",
       inputVal_r: ""
     }
   },
