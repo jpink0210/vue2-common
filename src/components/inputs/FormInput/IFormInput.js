@@ -1,4 +1,4 @@
-export const ITextPure = {
+export const IFormInput = {
   props: {
     error: {
       type: Boolean,

@@ -32,10 +32,10 @@
 
 <script>
 import Vue from "vue";
-import { ITextPure } from "./ITextPure.js";
+import { IFormInput } from "./IFormInput.js";
 
 export default {
-  extends: Vue.extend(ITextPure),
+  extends: Vue.extend(IFormInput),
   model: {
     prop: "value",
     event: "inputValue"

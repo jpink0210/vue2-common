@@ -21,11 +21,14 @@
     <CheckBox />
     <div class="row">
       <div class="col-2">
-        <TextPure
+        <FormInput
           v-model="inputVal_1"
           :clearable="inputVal_1.length > 0"
-          @clear="onClearV1"
+          @clear="inputVal_1 = ''"
         />
+      </div>
+      <div>
+        <FormRadio />
       </div>
     </div>
   </div>
@@ -34,13 +37,17 @@
 <script>
 import ChechBoxAryInput from "@/components/ChechBoxAryInput";
 import CheckBox from "@/components/inputs/CheckBox";
-import TextPure from "@/components/inputs/TextPure";
+import FormInput from "@/components/inputs/FormInput";
+import FormRadio from "@/components/inputs/FormRadio";
+
+
 export default {
   name: 'Demo',
   components: {
     ChechBoxAryInput,
     CheckBox,
-    TextPure
+    FormInput,
+    FormRadio
   },
   data() {
     return {
@@ -55,9 +62,6 @@ export default {
     checkedChange() {
       console.log("checkedChange")
     },
-    onClearV1() {
-      this.inputVal_1 = "";
-    }
   }
 }
 </script>
