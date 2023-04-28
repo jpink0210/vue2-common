@@ -39,6 +39,12 @@
         <FormRadio v-model="inputVal_r" value="3"> 3 </FormRadio>
         <FormRadio v-model="inputVal_r" value="4"> 4 </FormRadio>
       </div>
+      <div>
+        <FormCheckbox  :localValue="input_checkbox" :value="1" />
+        <FormCheckbox  :localValue="input_checkbox" :value="2" />
+        <FormCheckbox  :localValue="input_checkbox" :value="3" />
+        <FormCheckbox  :localValue="input_checkbox" :value="4" />
+      </div>
     </div>
   </div>
 </template>
@@ -48,6 +54,7 @@ import ChechBoxAryInput from "@/components/ChechBoxAryInput";
 import CheckBox from "@/components/inputs/CheckBox";
 import FormInput from "@/components/inputs/FormInput";
 import FormRadio from "@/components/inputs/FormRadio";
+import FormCheckbox from "@/components/inputs/FormCheckbox";
 
 
 export default {
@@ -56,14 +63,16 @@ export default {
     ChechBoxAryInput,
     CheckBox,
     FormInput,
-    FormRadio
+    FormRadio,
+    FormCheckbox
   },
   data() {
     return {
       localValue : ["1",2,3,4],
       inputVal_1: "",
       inputVal_num: "",
-      inputVal_r: ""
+      inputVal_r: "",
+      input_checkbox: [],
     }
   },
   mounted: function () {
