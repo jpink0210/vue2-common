@@ -120,17 +120,5 @@ export default Vue.extend({
       }
     }
   }
-
-  &--multiple {
-    input[type="radio"] {
-      + span {
-        &::after {
-          top: 6px;
-          height: 0;
-          transform: rotate(0);
-        }
-      }
-    }
-  }
 }
 </style>

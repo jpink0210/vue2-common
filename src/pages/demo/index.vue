@@ -28,7 +28,10 @@
         />
       </div>
       <div>
-        <FormRadio />
+        <FormRadio v-model="inputVal_r" value="1"> 1 </FormRadio>
+        <FormRadio v-model="inputVal_r" value="2"> 2 </FormRadio>
+        <FormRadio v-model="inputVal_r" value="3"> 3 </FormRadio>
+        <FormRadio v-model="inputVal_r" value="4"> 4 </FormRadio>
       </div>
     </div>
   </div>
@@ -52,7 +55,8 @@ export default {
   data() {
     return {
       localValue : ["1",2,3,4],
-      inputVal_1: ""
+      inputVal_1: "",
+      inputVal_r: ""
     }
   },
   mounted: function () {
