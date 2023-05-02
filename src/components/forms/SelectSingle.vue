@@ -41,7 +41,6 @@ import FormInput from "@/components/inputs/FormInput";
 import Dropdown from "@/components/dropdown/Dropdown";
 import OptionsText from "@/components/dropdown/OptionsText";
 import isEmpty from "lodash/isEmpty";
-import find from "lodash/find";
 
 export default {
   name: "Select",
