@@ -94,7 +94,7 @@
 <script>
 import VueTypes from "vue-types";
 import find from "lodash/find";
-import FormCheckbox from "components/inputs/FormCheckbox";
+import FormCheckbox from "../../components/inputs/FormCheckbox";
 
 export default {
   name: "Dropdown",
