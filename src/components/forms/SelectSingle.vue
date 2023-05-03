@@ -43,7 +43,7 @@ import OptionsText from "@/components/dropdown/OptionsText";
 import isEmpty from "lodash/isEmpty";
 
 export default {
-  name: "Select",
+  name: "SelectSingle",
   components: {
     Dropdown,
     FormInput,
@@ -123,7 +123,6 @@ export default {
       }
       setTimeout(() => {
         this.dropdownShow = false;
-        // this.$emit("selectChange");
       }, 0);
     }
   }
