@@ -49,7 +49,30 @@
         <FormCheckbox  :localValue="input_checkbox" :value="3">3</FormCheckbox>
         <FormCheckbox  :localValue="input_checkbox" :value="4">4</FormCheckbox>
       </div>
+      <div class="w-100"></div>
     </div>
+
+    <div class="row bg-mt1 p-3" :style="{minHeight: `300px`}">
+        <div class="col-4">
+          <Select
+            :select-options="selectOptions"
+            v-model="selectValue"
+            select-placeholder="請輸入文字"
+            class="position-relative ml-2"
+            @change="selectPureChange"
+          />
+        </div>
+        <div class="col-4">
+
+          <SelectSingle
+            :select-options="selectOptions"
+            v-model="selectSingleValue"
+            select-placeholder="請輸入xx"
+            class="position-relative ml-2"
+            @change="selectSingleChange"
+          />
+        </div>
+      </div>
   </div>
 </template>
 
@@ -60,12 +83,16 @@ import FormInput from "@/components/inputs/FormInput";
 import FormRadio from "@/components/inputs/FormRadio";
 import FormCheckbox from "@/components/inputs/FormCheckbox";
 
+import Select from "@/components/forms/Select";
+import SelectSingle from "@/components/forms/SelectSingle";
 
 export default {
   name: 'Demo',
   components: {
     ChechBoxAryInput,
     CheckBox,
+    Select,
+    SelectSingle,
     FormInput,
     FormRadio,
     FormCheckbox
@@ -77,7 +104,18 @@ export default {
       inputVal_num: "",
       inputVal_r: "",
       input_checkbox: [],
+      selectValue: [],
+      selectSingleValue: [],
+      selectOptions: [
+        { text: "藝術", value: 1 },
+        { text: "文學", value: 2 },
+        { text: "科學", value: 3 },
+        { text: "哲學", value: 4 },
+        { text: "商業", value: 5 }
+      ],
     }
+  },
+  computed: {
   },
   mounted: function () {
   },
@@ -86,6 +124,12 @@ export default {
     checkedChange() {
       console.log("checkedChange")
     },
+    selectSingleChange(modal) {
+      this.selectSingleValue = [modal];
+    },
+    selectPureChange(modal) {
+      this.selectValue = [modal];
+    }
   }
 }
 </script>
