@@ -29,8 +29,8 @@
 
 <script>
 import VueTypes from "vue-types";
-import FormInput from "@/components/inputs/FormInput";
-import DropdownMix from "@/components/dropdown/DropdownMix";
+import FormInput from "../../components/inputs/FormInput";
+import DropdownMix from "../../components/dropdown/DropdownMix";
 import isEmpty from "lodash/isEmpty";
 
 export default {
