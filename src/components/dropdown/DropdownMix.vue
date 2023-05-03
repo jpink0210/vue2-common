@@ -213,7 +213,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "~scss/forms/Select.scss";
+@import "../../scss/forms/Select.scss";
 
 .dropdown {
   box-shadow: 0 0 0 2px #fff;
