@@ -17,7 +17,7 @@
         :class="[{ 'input-disabled': selectDisabled }]"
       >
         <span
-          class="text-region"
+          class="h3 text-gray-dark form-control--placeholder"
           :class="[{ placeholder: !selectValue }]"
         >
           {{inputTextShow}}
