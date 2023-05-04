@@ -17,8 +17,8 @@
         :class="[{ 'input-disabled': selectDisabled }]"
       >
         <span
-          class="h3 text-gray-dark form-control--placeholder"
-          :class="[{ placeholder: !selectValue }]"
+          class="text-region h3"
+          :class="[ !isEmpty(selectValue) ? ``: `placeholder text-gray-dark form-control--placeholder` ]"
         >
           {{inputTextShow}}
         </span>
@@ -114,7 +114,8 @@ export default {
       setTimeout(() => {
         this.dropdownShow = false;
       }, 0);
-    }
+    },
+    isEmpty
   }
 };
 </script>
