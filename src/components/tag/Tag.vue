@@ -27,8 +27,7 @@ export default {
   props: {
     data: VueTypes.shape({
       text: VueTypes.string.def(""),
-      id: VueTypes.oneOfType([VueTypes.string, VueTypes.integer]).def(""),
-
+      value: VueTypes.oneOfType([VueTypes.string, VueTypes.integer]).def(""),
     }),
     showIcon: VueTypes.bool.def(true),
     index: VueTypes.oneOfType([VueTypes.string, VueTypes.integer]).def(-1),
