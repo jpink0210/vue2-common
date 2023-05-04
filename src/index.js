@@ -4,6 +4,7 @@ import FormInput from "./components/inputs/FormInput";
 import FormRadio from "./components/inputs/FormRadio";
 import FormCheckbox from "./components/inputs/FormCheckbox";
 import Select from "./components/forms/Select";
+import Tag from "./components/tag/Tag";
 
 export {
     ChechBoxAryInput,
@@ -11,5 +12,6 @@ export {
     FormInput,
     FormRadio,
     FormCheckbox,
-    Select
+    Select,
+    Tag
 }
