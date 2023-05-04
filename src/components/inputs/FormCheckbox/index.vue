@@ -51,15 +51,12 @@ export default {
             this.localValue.find(
               value => JSON.stringify(value) === JSON.stringify(this.value)
             ) !== undefined;
-
+  
           return hasValueInside;
         }
         if (this.trueValue) return this.localValue === this.trueValue;
         if (this.falseValue && defaultChecked) return !(this.localValue === this.falseValue);
-
-        return this.localValue;
       }
-
       return defaultChecked;
     },
     hasModelDirective() {

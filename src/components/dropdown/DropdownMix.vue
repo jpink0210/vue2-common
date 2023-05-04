@@ -36,10 +36,10 @@
             @click="autoCompleteMenuClick(option)"
           >
             <FormCheckbox
-                :localValue="multiValue"
-                :value="option.value"
-                @click="autoCompleteMenuClick(option)"
-
+              :localValue="multiValue"
+              :value="option.value"
+              :checked="find(multiValue, item => item.value === option.value)"
+              @click="autoCompleteMenuClick(option)"
             >
                 {{option.text}}
             </FormCheckbox>
@@ -109,7 +109,12 @@ export default {
     options: VueTypes.array.def([]),
     selectType: VueTypes.string.def("single"),
     max: VueTypes.number.def(100),
-    multiValue: VueTypes.array.def([]),
+    multiValue: VueTypes.arrayOf(
+      VueTypes.shape({
+        text: VueTypes.string.def(""),
+        value: VueTypes.any.def(0)
+      })
+    ).def([]),
     menuAlwaysShow: VueTypes.bool.def(false),
     maxTipText: VueTypes.string.def(""),
     maxAlertNoShow: VueTypes.bool.def(false),
@@ -137,12 +142,12 @@ export default {
         "position-relative": this.positionRelative,
         "multiselect__content-wrapper": true
       };
-    }
+    },
   },
   watch: {
     options() {
       this.orderHover = -1;
-    }
+    },
   },
   mounted() {},
   methods: {
@@ -207,7 +212,7 @@ export default {
       const scrollPage = Math.floor(this.orderHover / 7);
       this.$refs.lister.scrollTop = this.$refs.lister.clientHeight * scrollPage;
     },
-    find,
+    find
   }
 };
 </script>

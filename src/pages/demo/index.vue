@@ -1,5 +1,17 @@
 <template>
   <div>
+    <div class="row">
+        <div class="col-6">
+          <SelectMultiple 
+            :select-options="selectOptions"
+            v-model="multiValue"
+            class="position-relative"
+            :max="3"
+            max-tip-text="已達上限"
+            select-placeholder="點擊選取"
+          />
+        </div>
+      </div>
 
     <p>我確實都是使用了： export default Vue.extend，為了釋出</p>    
 
@@ -13,7 +25,6 @@
         localValue
       }"
       @change="change"
-      @checkedChange="checkedChange"
     >
       {{ item }}
     </chech-box-ary-input>
@@ -44,10 +55,10 @@
       <p>localValue required && must Array</p>
       <div class="w-100"></div>
       <div>
-        <FormCheckbox  :localValue="input_checkbox" :value="1">1</FormCheckbox>
-        <FormCheckbox  :localValue="input_checkbox" :value="2">2</FormCheckbox>
-        <FormCheckbox  :localValue="input_checkbox" :value="3">3</FormCheckbox>
-        <FormCheckbox  :localValue="input_checkbox" :value="4">4</FormCheckbox>
+        <FormCheckbox :localValue="input_checkbox" :value="1">1</FormCheckbox>
+        <FormCheckbox :localValue="input_checkbox" :value="2">2</FormCheckbox>
+        <FormCheckbox :localValue="input_checkbox" :value="3">3</FormCheckbox>
+        <FormCheckbox :localValue="input_checkbox" :value="4">4</FormCheckbox>
       </div>
       <div class="w-100"></div>
     </div>
@@ -84,6 +95,7 @@
             />
         </div>
       </div>
+      
   </div>
 </template>
 
@@ -97,7 +109,7 @@ import FormCheckbox from "@/components/inputs/FormCheckbox";
 import Select from "@/components/forms/Select";
 import SelectSingle from "@/components/forms/SelectSingle";
 import Tag from "@/components/tag/Tag";
-import findIndex from "lodash/findIndex";
+import SelectMultiple from "@/components/forms/SelectMultiple";
 
 export default {
   name: 'Demo',
@@ -109,7 +121,8 @@ export default {
     FormInput,
     FormRadio,
     FormCheckbox,
-    Tag
+    Tag,
+    SelectMultiple
   },
   data() {
     return {
@@ -118,6 +131,7 @@ export default {
       inputVal_num: "",
       inputVal_r: "",
       input_checkbox: [],
+      multiValue: [],
       selectValue: [],
       selectSingleValue: [],
       selectOptions: [
@@ -128,8 +142,8 @@ export default {
         { text: "商業", value: 5 }
       ],
       demoTags: [
-        { text: "軟體工程師", id: 2276 },
-        { text: "DevOps工程師", id: 1422 },
+        { text: "軟體工程師", value: 2276 },
+        { text: "DevOps工程師", value: 1422 },
 
       ]
     }
@@ -140,9 +154,6 @@ export default {
   },
   methods: {
     change() {},
-    checkedChange() {
-      console.log("checkedChange")
-    },
     selectSingleChange(modal) {
       this.selectSingleValue = [modal];
     },
