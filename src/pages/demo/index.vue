@@ -144,7 +144,6 @@ export default {
       demoTags: [
         { text: "軟體工程師", value: 2276 },
         { text: "DevOps工程師", value: 1422 },
-
       ]
     }
   },

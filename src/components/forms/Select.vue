@@ -13,7 +13,7 @@
     <template slot="inputSpace">
       <div
         ref="input"
-        class="d-flex flex-wrap input-show d-flex align-items-center"
+        class="form-control d-flex flex-wrap input-show d-flex align-items-center"
         :class="[{ 'input-disabled': selectDisabled }]"
       >
         <span
