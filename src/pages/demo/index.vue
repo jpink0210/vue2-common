@@ -63,7 +63,6 @@
           />
         </div>
         <div class="col-4">
-
           <SelectSingle
             :select-options="selectOptions"
             v-model="selectSingleValue"
@@ -71,6 +70,18 @@
             class="position-relative ml-2"
             @change="selectSingleChange"
           />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+            <Tag
+              v-for="(tag, index) in demoTags"
+              :key="index"
+              :data="tag"
+              class="col-auto"
+              @deleteTag="deleteTag"
+              @click.prevent
+            />
         </div>
       </div>
   </div>
@@ -85,6 +96,8 @@ import FormCheckbox from "@/components/inputs/FormCheckbox";
 
 import Select from "@/components/forms/Select";
 import SelectSingle from "@/components/forms/SelectSingle";
+import Tag from "@/components/tag/Tag";
+import findIndex from "lodash/findIndex";
 
 export default {
   name: 'Demo',
@@ -95,7 +108,8 @@ export default {
     SelectSingle,
     FormInput,
     FormRadio,
-    FormCheckbox
+    FormCheckbox,
+    Tag
   },
   data() {
     return {
@@ -113,6 +127,11 @@ export default {
         { text: "哲學", value: 4 },
         { text: "商業", value: 5 }
       ],
+      demoTags: [
+        { text: "軟體工程師", id: 2276 },
+        { text: "DevOps工程師", id: 1422 },
+
+      ]
     }
   },
   computed: {
@@ -129,6 +148,9 @@ export default {
     },
     selectPureChange(modal) {
       this.selectValue = [modal];
+    },
+    deleteTag(tagObj) {
+      this.demoTags = this.demoTags.filter(x => x !== tagObj);
     }
   }
 }
