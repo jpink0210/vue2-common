@@ -17,9 +17,10 @@ sass-loader, node-sass
 yarn build
 ```
 
-### Lints and fixes files
+### Launch
 ```
-yarn lint
+nvm use v12.22.12
+yarn serve
 ```
 
 ### Customize configuration
